@@ -1,0 +1,83 @@
+call plug#begin('~/.config/nvim/plugged')
+" Fuzzy find
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+"Tree
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
+" LSP + Completion
+Plug 'neovim/nvim-lspconfig'
+" main one
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" 9000+ Snippets
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+
+" Theming and Formatting
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'mhartington/formatter.nvim'
+Plug 'dracula/vim'
+Plug 'catppuccin/nvim'
+Plug 'arcticicestudio/nord-vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'tiagovla/tokyodark.nvim'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'nvim-lualine/lualine.nvim'
+
+" Plug 'projekt0n/github-nvim-theme'
+
+" Better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+" Utilities
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'akinsho/toggleterm.nvim'
+" Plug 'ggandor/lightspeed.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'windwp/nvim-autopairs'
+Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'mbbill/undotree'
+call plug#end()
+
+"neovide
+let g:neovide_refresh_rate=60
+
+let mapleader=" "
+
+
+nnoremap <leader>t <cmd>CHADopen<cr>
+nnoremap <leader>u <cmd>UndotreeToggle<cr>
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppattern %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+augroup PERSONAL
+    autocmd!
+    autocmd BufWritePre * :call TrimWhitespace()
+augroup END
+
+let &t_ut=''
+let g:gruvbox_italic=1
+
+colorscheme gruvbox
+" colorscheme dracula
+" colorscheme catppuccin
+" colorscheme tokyodark
+" colorscheme github_dark
+
+lua << EOF
+require('gitsigns').setup()
+require'toggleterm'.setup {
+  shade_terminals = false
+}
+require('nvim-autopairs').setup{}
+EOF
+
