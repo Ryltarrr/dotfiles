@@ -47,3 +47,9 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+
+" nvim-tree
+nnoremap <leader>t <cmd>NvimTreeToggle<cr>
+
+" undotree
+nnoremap <leader>u <cmd>UndotreeToggle<cr>

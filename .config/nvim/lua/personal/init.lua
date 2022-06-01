@@ -26,6 +26,12 @@ vim.api.nvim_set_keymap("n", "<leader>lg", "<cmd>lua _lazygit_toggle()<CR>", {no
 
 -- indent_blankline.nvim
 vim.opt.list = true
--- vim.opt.listchars:append("space:⋅")
 
 require("indent_blankline").setup {}
+require'nvim-tree'.setup {}
+require('gitsigns').setup{}
+require'toggleterm'.setup {
+  shade_terminals = false
+}
+require('nvim-autopairs').setup{}
+

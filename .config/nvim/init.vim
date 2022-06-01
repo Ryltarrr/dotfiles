@@ -4,8 +4,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 "Tree
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-
+Plug 'kyazdani42/nvim-tree.lua'
 " LSP + Completion
 Plug 'neovim/nvim-lspconfig'
 " main one
@@ -17,7 +16,7 @@ Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'mhartington/formatter.nvim'
 Plug 'dracula/vim'
-Plug 'catppuccin/nvim'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'arcticicestudio/nord-vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'tiagovla/tokyodark.nvim'
@@ -72,12 +71,4 @@ colorscheme catppuccin
 
 " colorscheme tokyodark
 " colorscheme github_dark
-
-lua << EOF
-require('gitsigns').setup()
-require'toggleterm'.setup {
-  shade_terminals = false
-}
-require('nvim-autopairs').setup{}
-EOF
 
