@@ -2,7 +2,6 @@ call plug#begin('~/.config/nvim/plugged')
 " Fuzzy find
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
 "Tree
 Plug 'kyazdani42/nvim-tree.lua'
 " LSP + Completion
@@ -72,3 +71,15 @@ colorscheme catppuccin
 " colorscheme tokyodark
 " colorscheme github_dark
 
+lua << EOF
+vim.opt.list = true
+
+require("indent_blankline").setup {}
+require'nvim-tree'.setup {}
+require('gitsigns').setup{}
+require'toggleterm'.setup {
+  shade_terminals = false
+}
+require('nvim-autopairs').setup{}
+
+EOF
