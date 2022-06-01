@@ -1,6 +1,6 @@
 let g:coq_settings = { 'auto_start': 'shut-up' }
 let g:lsp_diagnostics_echo_cursor = 1
-" set completeopt=menu,menuone,noselect
+set completeopt=menu,menuone,noselect
 
 lua <<EOF
     local nvim_lsp = require('lspconfig')

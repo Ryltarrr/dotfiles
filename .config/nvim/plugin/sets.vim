@@ -9,6 +9,8 @@ set termguicolors
 set background=dark
 set guifont=Fira\ Code:h12
 
+set mouse=nv
+
 set exrc
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -26,6 +28,9 @@ set noerrorbells
 set nowrap
 
 set noshowmode
+
+set ignorecase
+set smartcase
 
 set noswapfile
 set nobackup
