@@ -64,12 +64,12 @@ augroup PERSONAL
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-let &t_ut=''
-let g:gruvbox_italic=1
-
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
 " colorscheme dracula
-" colorscheme catppuccin
+let g:catppuccin_flavour = "macchiato"
+colorscheme catppuccin
+
 " colorscheme tokyodark
 " colorscheme github_dark
 
