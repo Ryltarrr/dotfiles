@@ -22,6 +22,7 @@ set relativenumber
 
 set nohlsearch
 set inccommand=split
+set incsearch
 
 set hidden
 set noerrorbells
@@ -37,7 +38,6 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 
-set incsearch
 set scrolloff=8
 set scroll=20
 
