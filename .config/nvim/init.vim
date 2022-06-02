@@ -6,6 +6,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 " LSP + Completion
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -25,8 +26,6 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'tiagovla/tokyodark.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'nvim-lualine/lualine.nvim'
-
-" Plug 'projekt0n/github-nvim-theme'
 
 " Better syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
