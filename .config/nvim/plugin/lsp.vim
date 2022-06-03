@@ -3,6 +3,7 @@ set completeopt=menu,menuone,noselect
 lua <<EOF
     local cmp = require'cmp'
     local nvim_lsp = require('lspconfig')
+    local lspkind = require('lspkind')
     cmp.setup({
       snippet = {
         -- REQUIRED - you must specify a snippet engine
@@ -14,6 +15,7 @@ lua <<EOF
         -- completion = cmp.config.window.bordered(),
         -- documentation = cmp.config.window.bordered(),
       },
+      experimental = { ghost_text = true },
       mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -29,7 +31,10 @@ lua <<EOF
         { name = 'vsnip' }, -- For vsnip users.
       }, {
         { name = 'buffer',  keyword_length = 5 },
-      })
+      }),
+      formatting = {
+        format = lspkind.cmp_format(),
+      }
     })
 
     -- Set configuration for specific filetype.
@@ -58,6 +63,7 @@ lua <<EOF
         { name = 'cmdline' }
       })
     })
+
 
     -- Setup lspconfig.
     -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
