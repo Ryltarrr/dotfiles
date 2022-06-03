@@ -28,7 +28,7 @@ lua <<EOF
         { name = 'nvim_lsp' },
         { name = 'vsnip' }, -- For vsnip users.
       }, {
-        { name = 'buffer' },
+        { name = 'buffer',  keyword_length = 5 },
       })
     })
 
