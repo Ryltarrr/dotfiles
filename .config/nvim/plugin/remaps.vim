@@ -8,7 +8,7 @@ nnoremap <leader>ft <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>fp <cmd>Telescope resume<cr>
-nnoremap <leader>vt <cmd>Telescope diagnostics bufnr=0<cr>
+nnoremap <leader>fd <cmd>Telescope diagnostics bufnr=0<cr>
 nnoremap <leader>vrr <cmd>Telescope lsp_references<cr>
 nnoremap <leader>fsw <cmd>Telescope grep_string<cr>
 vnoremap <leader>fsw <cmd>Telescope grep_string<cr>

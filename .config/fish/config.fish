@@ -21,7 +21,7 @@ set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $HOME/.cargo/env $PATH
 
 alias ssh="kitty +kitten ssh"
-alias ls="exa -l"
+alias ls="exa"
 # alias cat="bat"
 alias python=python3
 alias pip=pip3
