@@ -53,3 +53,6 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " undotree
 nnoremap <leader>u <cmd>UndotreeToggle<cr>
+
+" toggleterm
+nnoremap <leader>c <cmd>ToggleTerm direction=float<cr>
