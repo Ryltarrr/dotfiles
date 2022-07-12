@@ -42,6 +42,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mbbill/undotree'
 call plug#end()
@@ -85,5 +86,5 @@ require'toggleterm'.setup {
   shade_terminals = false
 }
 require('nvim-autopairs').setup{}
-
+require('nvim-ts-autotag').setup()
 EOF
