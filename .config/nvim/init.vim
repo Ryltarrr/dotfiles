@@ -42,8 +42,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'mbbill/undotree'
+
+Plug 'github/copilot.vim'
 call plug#end()
 
 "neovide
@@ -79,11 +82,15 @@ lua << EOF
 vim.opt.list = true
 
 require("indent_blankline").setup {}
-require'nvim-tree'.setup {}
+require'nvim-tree'.setup {
+  disable_netrw = true,
+  open_on_setup = false,
+  open_on_setup_file = false,
+}
 require('gitsigns').setup{}
 require'toggleterm'.setup {
   shade_terminals = false
 }
 require('nvim-autopairs').setup{}
-
+require('nvim-ts-autotag').setup{}
 EOF
