@@ -18,7 +18,7 @@ set PATH $ANDROID_HOME/tools/bin $PATH
 set PATH $ANDROID_HOME/platform-tools $PATH
 
 # set PATH /home/justin/.platformio/penv/bin $PATH
-set PATH $HOME/.cargo/env $PATH
+set PATH $HOME/.cargo/bin $PATH
 
 alias ssh="kitty +kitten ssh"
 alias ls="exa"
@@ -38,3 +38,4 @@ alias lg='lazygit'
 alias icat='kitty +kitten icat'
 alias config='/usr/bin/git --git-dir=/home/justin/.cfg/ --work-tree=/home/justin'
 alias lgc='lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias ld='docker run --rm -it --name lazydocker -v /var/run/docker.sock:/var/run/docker.sock lazyteam/lazydocker'
