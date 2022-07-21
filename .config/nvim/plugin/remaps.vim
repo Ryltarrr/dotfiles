@@ -53,3 +53,10 @@ nnoremap <leader>t <cmd>NvimTreeToggle<cr>
 
 " undotree
 nnoremap <leader>u <cmd>UndotreeToggle<cr>
+
+" toggleterm
+nnoremap <leader>c <cmd>ToggleTerm direction=float<cr>
+
+" copilot
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
