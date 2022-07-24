@@ -1,9 +1,10 @@
+vim.api.nvim_exec([[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost *.py,*.dart,*.rs,*.tsx,*.ts,*.jsx,*.js,*.html,*.go,*.vue FormatWrite
+  autocmd BufWritePost * FormatWrite
 augroup END
+]], true)
 
-lua <<EOF
 require('formatter').setup({
   filetype = {
     vue = {
@@ -105,7 +106,16 @@ require('formatter').setup({
           stdin = true
         }
       end
-    }
-  }
+    },
+    prisma = {
+      -- prettier
+      function()
+        return {
+          exe = "prettier",
+          args = {"--stdin-filepath", vim.fn.fnameescape(vim.api.nvim_buf_get_name(0))},
+          stdin = true
+        }
+      end
+    },
+  },
 })
-EOF
