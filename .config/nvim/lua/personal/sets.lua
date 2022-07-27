@@ -1,7 +1,4 @@
-local api = vim.api
-local g = vim.g
 local opt = vim.opt
-local cmd = vim.cmd
 
 opt.termguicolors = true   -- Enable colors in terminal
 opt.mouse = "a"            -- Enable mouse mode
