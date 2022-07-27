@@ -1,0 +1,16 @@
+local nnoremap = require("personal.keymap").nnoremap
+local ui = require("harpoon.ui")
+local mark = require("harpoon.mark")
+
+nnoremap("<Leader>hh", function()
+  ui.toggle_quick_menu()
+end)
+nnoremap("<Leader>hp", function()
+  ui.nav_prev()
+end)
+nnoremap("<Leader>hn", function()
+  ui.nav_next()
+end)
+nnoremap("<Leader>ha", function()
+  mark.add_file()
+end)
