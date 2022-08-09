@@ -3,13 +3,19 @@ require("nvim-treesitter.configs").setup({
 		"python",
 		"javascript",
 		"typescript",
+		"tsx",
 		"go",
+		"rust",
 		"lua",
+		"php",
+		"vue",
+		"css",
+		"json",
+		"prisma",
 	},
 	highlight = {
 		enable = true,
 	},
-
 	incremental_selection = {
 		enable = true,
 		keymaps = {
@@ -20,6 +26,6 @@ require("nvim-treesitter.configs").setup({
 		},
 	},
 	indent = {
-		enable = false,
+		enable = true,
 	},
 })

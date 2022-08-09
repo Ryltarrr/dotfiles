@@ -37,6 +37,9 @@ require("formatter").setup({
 		prisma = {
 			require("formatter.defaults.prettier"),
 		},
+		php = {
+			require("formatter.defaults.prettier"),
+		},
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},

@@ -19,7 +19,6 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-vsnip")
 	use("hrsh7th/vim-vsnip")
 	use("onsails/lspkind.nvim")
-
 	use({
 		"kyazdani42/nvim-tree.lua",
 		requires = {
@@ -34,17 +33,19 @@ return require("packer").startup(function()
 			require("nvim-autopairs").setup({})
 		end,
 	})
-	use({ "windwp/nvim-ts-autotag" })
-
+	use({
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	})
 	use({ "tpope/vim-surround" })
-	use({ "tpope/vim-commentary" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 	use({ "akinsho/toggleterm.nvim" })
 	use({ "tpope/vim-fugitive" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({ "machakann/vim-highlightedyank" })
 	use({ "mhartington/formatter.nvim" })
-
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -53,5 +54,11 @@ return require("packer").startup(function()
 	use({
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
+	})
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
 	})
 end)
