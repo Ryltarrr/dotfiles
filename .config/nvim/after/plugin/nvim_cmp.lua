@@ -76,7 +76,7 @@ local servers = {
 	"clangd",
 	"prismals",
 	"gopls",
-	"phpactor",
+	"intelephense",
 }
 
 -- Setup lspconfig.
