@@ -1,5 +1,5 @@
 local nnoremap = require("personal.keymap").nnoremap
-require('gitsigns').setup()
+require("gitsigns").setup()
 
 nnoremap("<leader>gn", "<cmd>Gitsigns next_hunk<cr>")
 nnoremap("<leader>gp", "<cmd>Gitsigns prev_hunk<cr>")
