@@ -39,3 +39,10 @@ alias icat='kitty +kitten icat'
 alias config='/usr/bin/git --git-dir=/home/justin/.cfg/ --work-tree=/home/justin'
 alias lgc='lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias ld='docker run --rm -it --name lazydocker -v /var/run/docker.sock:/var/run/docker.sock lazyteam/lazydocker'
+
+if not set -q TMUX
+    set -g TMUX tmux new-session -d -s base
+    eval $TMUX
+    tmux attach-session -d -t base
+end
+
