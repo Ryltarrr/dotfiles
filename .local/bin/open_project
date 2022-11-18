@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+if [ $# -eq 0 ]
+then
+    selected=$(find "$HOME/Documents" -maxdepth 1 -type d | fzf)
+else
+    selected=$(find "$1" -maxdepth 1 -type d | fzf)
+fi
+
+if [ -z "$selected" ]
+then
+    exit 1
+fi
+
+tabnumber=$(kitty @ launch --type=tab --keep-focus --cwd "$selected" fish)
+
+kitty @ focus-tab -m "id:$tabnumber"
