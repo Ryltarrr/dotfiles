@@ -1,0 +1,67 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=8
+set visualbell
+set number relativenumber
+
+" Do incremental searching.
+set incsearch
+
+let mapleader = " "
+map Q gq
+nmap Y y$
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+nmap <leader>rn <Action>(RenameElement)
+nmap <leader>rr <Action>(FindUsages)
+"" nmap <leader>vd <Action>(GotoDeclaration)
+nmap <leader>c <Action>(ShowIntentionActions)
+nmap <leader>vi <Action>(QuickImplementations)
+"" nmap <leader>vh <Action>(QuickJavaDoc)
+nmap <leader>vn <Action>(GotoNextError)
+nmap <leader>vp <Action>(GotoPreviousError)
+nmap <leader>vs <Action>(GotoSymbol)
+nmap <leader>vf ds(db
+nmap <leader>ff <Action>(SearchEverywhere)
+nmap <leader>ft <Action>(FindInPath)
+vmap <leader>fw <Action>(FindInPath)
+nmap <leader>fb <Action>(GotoDatabaseObject)
+nmap <leader>s <Action>(GotoSymbol)
+nmap <leader>r <Action>(Run)
+" nmap <leader>z :set nu<Action>(ToggleDistractionFreeMode)<Action>(ViewMainMenu)<cr>
+nmap <leader>z <Action>(HideAllWindows)
+nmap <leader>tr <Action>(RunClass)
+nmap <leader>a <Action>(PinActiveEditorTab)
+nmap <leader>& <Action>(GoToTab1)
+nmap <leader>é <Action>(GoToTab2)
+nmap <leader>" <Action>(GoToTab3)
+nmap <leader>' <Action>(GoToTab4)
+nmap <leader>( <Action>(GoToTab5)
+
+nmap <C-l> gt
+nmap <C-u> <C-u>zz
+nmap <C-d> <C-d>zz
+nmap <C-h> gT
+nnoremap zC <Action>(CollapseRegionRecursively)
+nnoremap zO <Action>(ExpandRegionRecursively)
+
+xmap <leader>p \"_dP
+nmap <leader>y \"+y
+vmap <leader>y \"+y
+
+
+nmap <C-o> <Action>(Back)
+nmap <C-i> <Action>(Forward)
+
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'vim-matchit'
+set ideajoin
+set NERDTree
+set noautoindent
+set sneak
+let g:sneak#label = 1
