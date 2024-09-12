@@ -34,12 +34,16 @@ nmap <leader>r <Action>(Run)
 " nmap <leader>z :set nu<Action>(ToggleDistractionFreeMode)<Action>(ViewMainMenu)<cr>
 nmap <leader>z <Action>(HideAllWindows)
 nmap <leader>tr <Action>(RunClass)
-nmap <leader>a <Action>(PinActiveEditorTab)
-nmap <leader>& <Action>(GoToTab1)
-nmap <leader>é <Action>(GoToTab2)
-nmap <leader>" <Action>(GoToTab3)
-nmap <leader>' <Action>(GoToTab4)
-nmap <leader>( <Action>(GoToTab5)
+nmap <leader>& <Action>(HarpoonerOpenFile0)
+nmap <leader>é <Action>(HarpoonerOpenFile1)
+nmap <leader>" <Action>(HarpoonerOpenFile2)
+nmap <leader>' <Action>(HarpoonerOpenFile3)
+nmap <leader>( <Action>(HarpoonerOpenFile4)
+nmap <C-e> <Action>(HarpoonerQuickMenu)
+nmap <leader>a <Action>(HarpoonerAddFile)
+
+nmap <leader>hn <action>(HarpoonerNextFileAction)
+nmap <leader>hp <action>(HarpoonerPreviousFileAction)
 
 nmap <C-l> gt
 nmap <C-u> <C-u>zz
@@ -55,6 +59,8 @@ vmap <leader>y \"+y
 
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
+imap <C-c> <nop>
+nmap <C-c> <nop>
 
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
