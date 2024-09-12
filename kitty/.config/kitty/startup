@@ -1,41 +1,6 @@
-new_tab core
-cd ~/Documents/inlead
-launch fish
-new_tab dc
-cd ~/Documents/digital-campaigns
-launch fish
-
-new_tab fac
-cd ~/Documents/facturation
-launch fish
-
-new_tab pm
-cd ~/Documents/presence-management
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs-back
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs-back
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs-back
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs
-launch fish
-
-new_tab
-cd ~/Documents/jml/jml-copieurs
-launch fish
+#new_tab core
+#cd ~/Documents/inlead
+#launch fish
 
 #new_tab notes
 #ssh debian@jstn.fr
