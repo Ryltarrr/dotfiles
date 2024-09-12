@@ -16,9 +16,11 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-c>", "<nop>")
+vim.keymap.set("n", "<C-c>", "<nop>")
 
 vim.keymap.set("n", "Q", "<nop>")
+-- vim.keymap.set("n", "<C-c>", "<nop>")
 
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>zz")
