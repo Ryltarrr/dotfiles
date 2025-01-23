@@ -39,6 +39,9 @@ nmap <leader>é <Action>(HarpoonerOpenFile1)
 nmap <leader>" <Action>(HarpoonerOpenFile2)
 nmap <leader>' <Action>(HarpoonerOpenFile3)
 nmap <leader>( <Action>(HarpoonerOpenFile4)
+nmap <leader>- <Action>(HarpoonerOpenFile5)
+nmap <leader>è <Action>(HarpoonerOpenFile6)
+nmap <leader>_ <Action>(HarpoonerOpenFile7)
 nmap <C-e> <Action>(HarpoonerQuickMenu)
 nmap <leader>a <Action>(HarpoonerAddFile)
 
@@ -55,7 +58,8 @@ nnoremap zO <Action>(ExpandRegionRecursively)
 xmap <leader>p \"_dP
 nmap <leader>y \"+y
 vmap <leader>y \"+y
-
+map s <Action>(flash.search)
+map <cr> <Action>(flash.search)
 
 nmap <C-o> <Action>(Back)
 nmap <C-i> <Action>(Forward)
@@ -65,7 +69,6 @@ nmap <C-c> <nop>
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
-Plug 'vim-matchit'
 set ideajoin
 set NERDTree
 set noautoindent
