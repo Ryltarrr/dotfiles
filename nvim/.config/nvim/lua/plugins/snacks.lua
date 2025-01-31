@@ -22,6 +22,7 @@ return {
 		keys = {
 			{ "<leader>lg", "<cmd>lua Snacks.lazygit()<cr>", desc = "LazyGit" },
 			{ "<leader>tl", "<cmd>lua Snacks.terminal.open()<cr>", desc = "Terminal" },
+			{ "<leader>tr", "<cmd>lua Snacks.picker.explorer()<cr>", desc = "Explorer" },
 		},
 	},
 }
