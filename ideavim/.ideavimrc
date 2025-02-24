@@ -48,6 +48,7 @@ nmap <leader>a <Action>(HarpoonerAddFile)
 nmap <leader>hn <action>(HarpoonerNextFileAction)
 nmap <leader>hp <action>(HarpoonerPreviousFileAction)
 
+nmap gi <Action>(GotoImplementation)
 nmap <C-l> gt
 nmap <C-u> <C-u>zz
 nmap <C-d> <C-d>zz
@@ -66,11 +67,11 @@ nmap <C-i> <Action>(Forward)
 imap <C-c> <nop>
 nmap <C-c> <nop>
 
+nmap <leader>o :NERDTreeToggle<cr>
+
 Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 set ideajoin
 set NERDTree
 set noautoindent
-set sneak
-let g:sneak#label = 1
