@@ -10,13 +10,6 @@ return {
         opts = {
             keymap = { preset = "enter" },
             signature = { enabled = true },
-            completion = {
-                menu = {
-                    auto_show = function(ctx)
-                        return ctx.mode ~= "cmdline"
-                    end,
-                },
-            },
             appearance = {
                 use_nvim_cmp_as_default = true,
                 nerd_font_variant = "mono",
@@ -24,6 +17,12 @@ return {
 
             sources = {
                 default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+                cmdline = {
+                    enabled = false,
+                    menu = {
+                        auto_show = true,
+                    },
+                },
                 providers = {
                     lazydev = {
                         name = "LazyDev",
