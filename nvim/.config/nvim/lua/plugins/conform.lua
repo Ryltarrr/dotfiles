@@ -14,6 +14,7 @@ return {
 				svelte = { "prettierd", "prettier", stop_after_first = true },
 				jsx = { "prettierd", "prettier", stop_after_first = true },
 				tsx = { "prettierd", "prettier", stop_after_first = true },
+				markdown = { "markdownlint", "prettierd", stop_after_first = true },
 				php = { nil },
 			},
 			format_on_save = {

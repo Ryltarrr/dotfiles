@@ -17,7 +17,7 @@ return {
 			notifier = { enabled = true },
 			quickfile = { enabled = true },
 			statuscolumn = { enabled = true },
-			words = { enabled = true },
+			-- words = { enabled = true },
 		},
 		keys = {
 			{ "<leader>lg", "<cmd>lua Snacks.lazygit()<cr>", desc = "LazyGit" },
