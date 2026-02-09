@@ -60,7 +60,18 @@ alias gP='git push'
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+set --export GOOGLE_CLOUD_PROJECT "gemini-code-assist-anytime-org"
+
+set -g EDITOR /usr/bin/nvim
 set -g fish_greeting
 # fish_config theme save "Catppuccin Macchiato"
 starship init fish | source
 # eval "$(/home/justin/Documents/brand-analyzer/bin/console completion fish)"
+alias sd='cd (find ~/dev/platform-anytime/projects/ -maxdepth 1 -type d | fzf)'
+
+# Created by `pipx` on 2025-10-14 07:32:37
+set PATH $PATH /home/jug/.local/bin
+
+set -Ux CARAPACE_BRIDGES 'fish' # optional
+carapace _carapace | source
+# jj util completion fish | source

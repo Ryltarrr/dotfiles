@@ -6,7 +6,8 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-font_family      Comic Code Ligatures
+font_family      ComicCodeLigatures
+#font_family      JetBrainsMonoNerdFont
 # font_family      FiraCode Nerd Font
 # bold_font        FiraCode Nerd Font
 # italic_font      FiraCode Nerd Font
@@ -47,7 +48,7 @@ font_size 13.0
 #: support, because it will force kitty to always treat the text as
 #: LTR, which FriBidi expects for terminals.
 
-# adjust_line_height  0
+adjust_line_height  1
 # adjust_column_width 0
 
 #: Change the size of each character cell kitty renders. You can use
@@ -177,6 +178,8 @@ font_size 13.0
 
 cursor_shape block
 shell_integration no-cursor
+cursor_trail 1
+cursor_trail_decay 0.1 0.3
 
 #: The cursor shape can be one of (block, beam, underline). Note that
 #: when reloading the config this will be changed only if the cursor
@@ -676,7 +679,7 @@ tab_bar_style powerline
 #:     for the https://sw.kovidgoyal.net/kitty/actions/#select-tab action which presents you with a list
 #:     of tabs and allows for easy switching to a tab.
 
-tab_bar_min_tabs 1
+tab_bar_min_tabs 2
 
 #: The minimum number of tabs that must exist before the tab bar is
 #: shown
@@ -947,7 +950,7 @@ allow_remote_control yes
 #: from controlling kitty. Reloading the config will not affect this
 #: setting.
 
-# listen_on none
+listen_on unix:/tmp/kitty
 
 #: Tell kitty to listen to the specified unix/tcp socket for remote
 #: control connections. Note that this will apply to all kitty
@@ -1287,8 +1290,10 @@ startup_session startup
 #: open a window with the current working directory.
 
 # map kitty_mod+w close_window
-# map kitty_mod+] next_window
-# map kitty_mod+[ previous_window
+map ctrl+left neighboring_window left
+map ctrl+right neighboring_window right
+#map kitty_mod+) next_window
+#map ctrl+left previous_window
 # map kitty_mod+f move_window_forward
 # map kitty_mod+b move_window_backward
 # map kitty_mod+` move_window_to_top
@@ -1516,10 +1521,20 @@ startup_session startup
 # map ctrl+k kitten pass_keys.py neighboring_window top    ctrl+k
 # map ctrl+h kitten pass_keys.py neighboring_window left   ctrl+h
 # map ctrl+l kitten pass_keys.py neighboring_window right  ctrl+l
-map f1 launch --type=overlay open_project
+map f1 launch --type=overlay fish -c 'cd (find ~/dev/platform-anytime/projects/ -maxdepth 1 -type d | fzf)'
 
+# kitty-scrollback.nvim Kitten alias
+action_alias kitty_scrollback_nvim kitten /home/justin/.local/share/nvim/lazy/kitty-scrollback.nvim/python/kitty_scrollback_nvim.py
+
+# Browse scrollback buffer in nvim
+map kitty_mod+h kitty_scrollback_nvim
+# Browse output of the last shell command in nvim
+map kitty_mod+g kitty_scrollback_nvim --config ksb_builtin_last_cmd_output
+
+# Show clicked command output in nvim
+mouse_map ctrl+shift+right press ungrabbed combine : mouse_select_command_output : kitty_scrollback_nvim --config ksb_builtin_last_visited_cmd_output
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Latte
+# Tokyo Night Storm
 include current-theme.conf
 # END_KITTY_THEME
